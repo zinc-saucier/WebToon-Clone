@@ -28,14 +28,6 @@ const index = () => {
 
       <Text style={styles.subheader}>What Everyone's Searching</Text>
 
-      <div style={styles.coverTiles}>
-        <CoverTile image={require("@/assets/images/CoverImage1.png")} />
-        <CoverTile image={require("@/assets/images/CoverImage2.png")} />
-        <CoverTile image={require("@/assets/images/CoverImage3.png")} />
-        <CoverTile image={require("@/assets/images/CoverImage1.png")} />
-        <CoverTile image={require("@/assets/images/CoverImage2.png")} />
-      </div>
-
       <Text style={styles.subheader}>Browse Categories</Text>
 
       <div style={styles.categoryTiles}>
