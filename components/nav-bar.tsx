@@ -41,7 +41,7 @@ const NavBar = () => {
         </Text>
         <Text
           style={styles.button}
-          onPress={() => router.navigate("/(tab)/subscribed/index")}
+          onPress={() => router.navigate("/(tab)/subscribed")}
         >
           {UserIcon}
           MY

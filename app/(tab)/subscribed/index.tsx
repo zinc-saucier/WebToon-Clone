@@ -3,6 +3,7 @@ import { theme } from "../../../styles/theme";
 import { useRouter } from 'expo-router';
 
 import ComicCard from '@/components/comic-card';
+import { comics } from '@/data/comics';
 
 const router = useRouter();
 
@@ -14,18 +15,17 @@ export default function Index() {
         <Text style={theme.h1}>My Series</Text>
     <ScrollView style={styles.container}>
       
-        <Pressable onPress={() => router.push("../(tab)/settings/profile")}>
+        {/* <Pressable onPress={() => router.push("../(tab)/settings/profile")}> */}
             <ComicCard
-                thumb={<Image source={{ uri: "https://www.webtoons.com/en/canvas/war-and-peas/list?title_no=63305" }} style={styles.comicThumb} />} 
+                id={1}
+                thumb="https://www.webtoons.com/en/canvas/war-and-peas/list?title_no=63305" 
                 title={''}
-                episode={''}
+                episode={2}
                 notif={''}
-                right={<Image
-                      source={{ uri: "https://www.webtoons.com/en/canvas/war-and-peas/list?title_no=63305" }}
-                      style={styles.comicThumb} />}
+                
                 />
                 
-        </Pressable>
+        {/* </Pressable> */}
         {/* <Pressable onPress={() => router.push("../(tab)/settings/profile")}>
             <ComicCard
                 title="Account"

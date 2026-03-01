@@ -20,4 +20,8 @@ export const theme = {
   h1: {
     //heading font style, "my series, spotlight, search etc"
   },
+  comicStyle: {
+ // styling for subscribed page tiles
+  },
+  
 };

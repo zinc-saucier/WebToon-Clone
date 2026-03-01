@@ -1,41 +1,39 @@
 // for subscribed and drill down comic/episode full width tiles
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+
 import { theme } from "../styles/theme";
+import { comics, ComicProps } from "@/data/comics";
 
 
-type ComicProps = {
-    thumb?: React.ReactNode;
-    title: string;
-    episode?: string;
-    notif: string;
-    right?: React.ReactNode;
-};
+
 // React.ReactNode is a TypeScript type that means: "anything React can render."
-export default function ComicCard({ thumb, title, episode, notif, right }: ComicProps) {
+const ComicCard = ({id, thumb, title, episode, notif}: ComicProps) => {
   return (
-    <View style={styles.card}>
-        {thumb ? <View>{thumb}</View> : null}
-      <View style={styles.textWrap}>
-        <Text style={styles.title}>{title}</Text>
-        {episode ? <Text style={styles.episode}>{episode}</Text> : null}
-        {notif ? <Text style={styles.notif}>{notif}</Text> : null}
-      </View>
-      {right ? <View>{right}</View> : null}
-    </View>
-  );
+    <ScrollView style={styles.container}>
+        {
+            comics.map((comic)=> (
+                <View key={id} style={styles.card}>
+                    <Image source={{ uri: thumb }} style={styles.comicTile}/>
+                    
+                    <Text style={styles.title}>{comic.title}</Text>
+                    <Text style={styles.episode}>{comic.episode}</Text>
+                    <Text style={styles.notif}>{comic.notif}</Text>
+                </View>
+            ))
+
+        }    
+         </ScrollView>
+       //insert button/pressable here
+    );
 }
+export default ComicCard
 
 const styles = StyleSheet.create({
+    container: {
+
+    },
   card: {
-    backgroundColor: theme.colors.card,
-    //borderRadius: theme.radius.card,
-    padding: theme.spacing.card,
-    borderWidth: 1,
-    borderColor: theme.colors.border,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginBottom: theme.spacing.gap,
+    
   },
   textWrap: {
     flex: 1,
@@ -55,5 +53,9 @@ const styles = StyleSheet.create({
     marginTop: 4,
     fontSize: 12,
     color: theme.colors.text,
+  },
+  comicTile: {
+    height: 100,
+    width: 100,
   },
 });

@@ -1,19 +1,28 @@
+import React from "react";
+import { Text, View, StyleSheet, Image, ScrollView } from "react-native";
 
-import { Text, View, StyleSheet, Image } from "react-native";
 
-type Props = {
-  text: string;
-  image?: string;
-};
+const tiles = [
+    {
+        text: '',
+        image: '',
+    }
+]
 
-const CategoryTile = ({text, image}: Props) => {
+const CategoryTile = () => {
     return (
+        <ScrollView>
+            {
+                tiles.map((tile)=>(
+            
         <View style={styles.box}>
-            <Text style={styles.boxText}>{text}</Text>
+            <Text style={styles.boxText}>{tile.text}</Text>
             <div style={styles.imageBox}>
-                {/* <Image source={image} style={styles.boxImage}/> */}
+                <Image source={{ uri:tile.image}} style={styles.boxImage}/>
             </div>
         </View>
+                ))
+        }</ScrollView>
     )
     
 }
