@@ -6,7 +6,7 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "#00dc64",
-        tabBarInactiveTintColor: "gray",
+        tabBarInactiveTintColor: "#8c8c8c",
         tabBarStyle: {
           height: 63,
           paddingBottom: 8,
@@ -34,7 +34,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="watch"
         options={{
-          title: "WATCH",
+          tabBarLabel: "WATCH",
           tabBarIcon: ({ color, size, focused }) => (
             <FontAwesome5
               name={focused ? "youtube" : "youtube-square"}
@@ -47,7 +47,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="search"
         options={{
-          title: "SEARCH",
+          tabBarLabel: "SEARCH",
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "search" : "search-outline"}
@@ -60,7 +60,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="canvas"
         options={{
-          title: "CANVAS",
+          tabBarLabel: "CANVAS",
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "albums" : "albums-outline"}
@@ -71,9 +71,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="my"
+        name="subscribed"
         options={{
-          title: "My",
+          tabBarLabel: "My",
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "person" : "person-outline"}

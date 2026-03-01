@@ -1,5 +1,4 @@
 import CategoryTile from "@/components/category-tile";
-import NavBar from "@/components/nav-bar";
 import React from "react";
 import { StatusBar, StyleSheet, Text, View } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
@@ -31,11 +30,15 @@ export default function Index() {
       <Text style={styles.subheader}>Browse Categories</Text>
 
       <div style={styles.categoryTiles}>
-        <CategoryTile text='Original Rankings' image={require('@/assets/images/ComicPreview1.png')} />
-        <CategoryTile text='Original Rankings' image='../assets/images/ComicPreview1.png' />
+        <CategoryTile
+          text="Original Rankings"
+          image={require("@/assets/images/ComicPreview1.png")}
+        />
+        <CategoryTile
+          text="Original Rankings"
+          image="../assets/images/ComicPreview1.png"
+        />
       </div>
-
-      <NavBar></NavBar>
     </View>
   );
 }
