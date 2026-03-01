@@ -1,12 +1,17 @@
-import React from "react";
+
 import { Text, View, StyleSheet, Image } from "react-native";
 
-const CategoryTile = ({text, image}) => {
+type Props = {
+  text: string;
+  image?: string;
+};
+
+const CategoryTile = ({text, image}: Props) => {
     return (
         <View style={styles.box}>
             <Text style={styles.boxText}>{text}</Text>
             <div style={styles.imageBox}>
-                <Image source={image} style={styles.boxImage}/>
+                {/* <Image source={image} style={styles.boxImage}/> */}
             </div>
         </View>
     )

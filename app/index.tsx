@@ -1,3 +1,4 @@
+
 import { Text, View, StatusBar } from "react-native";
 import { Redirect } from 'expo-router';
 

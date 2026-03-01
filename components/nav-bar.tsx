@@ -1,3 +1,4 @@
+
 import { Text, View, StyleSheet } from "react-native";
 import { useRouter } from 'expo-router';
 import Icon from "react-native-vector-icons/Feather";
@@ -16,11 +17,11 @@ const NavBar = () => {
                     {HomeIcon}
                     HOME
                 </Text>
-                <Text style={styles.button} onPress={() => router.navigate('/(tab)/search/home')}>
+                <Text style={styles.button} onPress={() => router.navigate('/(tab)/search')}>
                     {SearchIcon}
                     SEARCH
                 </Text>
-                <Text style={styles.button} onPress={() => router.navigate('/(tab)/subscribed/home')}>
+                <Text style={styles.button} onPress={() => router.navigate('/(tab)/subscribed')}>
                     {UserIcon}
                     MY
                 </Text>
