@@ -6,7 +6,7 @@ import Icon from "react-native-vector-icons/Feather";
 
 const SearchIcon = <Icon name="search" size={25} color={"#8c8c8c"} />;
 
-export default function Index() {
+const index = () => {
   return (
     <View
       style={{
@@ -80,7 +80,7 @@ export default function Index() {
       </div>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   header: {
@@ -116,3 +116,5 @@ const styles = StyleSheet.create({
     display: "flex",
   },
 });
+
+export default index;
