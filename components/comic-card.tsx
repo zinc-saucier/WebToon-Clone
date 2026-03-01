@@ -1,5 +1,5 @@
 // for subscribed and drill down comic/episode full width tiles
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View, Image } from "react-native";
 
 import { theme } from "../styles/theme";
 import { comics, ComicProps } from "@/data/comics";
@@ -15,7 +15,7 @@ const ComicCard = ({id, thumb, title, episode, notif}: ComicProps) => {
                 <View key={id} style={styles.card}>
                     <Image source={{ uri: thumb }} style={styles.comicTile}/>
                     
-                    <Text style={styles.title}>{comic.title}</Text>
+                    <Text style={styles.title}>{title}</Text>
                     <Text style={styles.episode}>{comic.episode}</Text>
                     <Text style={styles.notif}>{comic.notif}</Text>
                 </View>

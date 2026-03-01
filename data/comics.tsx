@@ -13,7 +13,7 @@ export type ComicProps = {
 export const comics = [
   {
     id: 1,
-    thumb: "https://www.webtoons.com/en/canvas/war-and-peas/list?title_no=63305",
+    thumb: "https://randomuser.me/api/portraits/women/1.jpg",
     title: 'war and peas',
     episode: 2,
     notif: 'last read yesterday',
