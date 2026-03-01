@@ -1,5 +1,5 @@
-import CategoryTile from "@/components/category-tile";
-import CoverTile from "@/components/cover-tile";
+import CategoryTile from "../../components/category-tile";
+import CoverTile from "../../components/cover-tile";
 import React from "react";
 import { StatusBar, StyleSheet, Text, View } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
