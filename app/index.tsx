@@ -1,9 +1,5 @@
-import { Text, View, StatusBar } from "react-native";
-import { Redirect } from 'expo-router';
+import { Redirect } from "expo-router";
 
 export default function Index() {
-  
-  return (
-    <Redirect href='/(tab)/home'></Redirect>
-  );
+  return <Redirect href="/(tab)/home" />;
 }
