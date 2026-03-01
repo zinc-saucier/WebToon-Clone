@@ -1,4 +1,5 @@
 import CategoryTile from "@/components/category-tile";
+import CoverTile from "@/components/cover-tile";
 import NavBar from "@/components/nav-bar";
 import React from "react";
 import { StatusBar, StyleSheet, Text, View } from "react-native";
@@ -28,11 +29,31 @@ export default function Index() {
 
       <Text style={styles.subheader}>What Everyone's Searching</Text>
 
+      <div style={styles.coverTiles}>
+        <CoverTile image={require('@/assets/images/CoverImage1.png')}/>
+        <CoverTile image={require('@/assets/images/CoverImage2.png')}/>
+        <CoverTile image={require('@/assets/images/CoverImage3.png')}/>
+        <CoverTile image={require('@/assets/images/CoverImage1.png')}/>
+        <CoverTile image={require('@/assets/images/CoverImage2.png')}/>
+      </div>
+      
       <Text style={styles.subheader}>Browse Categories</Text>
 
       <div style={styles.categoryTiles}>
         <CategoryTile text='Original Rankings' image={require('@/assets/images/ComicPreview1.png')} />
-        <CategoryTile text='Original Rankings' image='../assets/images/ComicPreview1.png' />
+        <CategoryTile text='CANVAS Rankings' image={require('@/assets/images/ComicPreview2.png')} />
+      </div>
+      <div style={styles.categoryTiles}>
+        <CategoryTile text='New Releases' image={require('@/assets/images/ComicPreview3.png')} />
+        <CategoryTile text='Daily' image={require('@/assets/images/ComicPreview4.png')} />
+      </div>
+      <div style={styles.categoryTiles}>
+        <CategoryTile text='US Originals' image={require('@/assets/images/ComicPreview5.png')} />
+        <CategoryTile text='Video Episodes' image={require('@/assets/images/ComicPreview6.png')} />
+      </div>
+      <div style={styles.categoryTiles}>
+        <CategoryTile text='Graphic Novels' image={require('@/assets/images/ComicPreview1.png')} />
+        <CategoryTile text='Action' image={require('@/assets/images/ComicPreview1.png')} />
       </div>
 
       <NavBar></NavBar>
@@ -70,4 +91,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
+  coverTiles: {
+    display: 'flex'
+  }
 });
