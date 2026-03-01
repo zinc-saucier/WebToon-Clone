@@ -1,5 +1,6 @@
-import { FontAwesome5, Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+
 export default function TabLayout() {
   return (
     <Tabs
@@ -21,7 +22,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="home"
         options={{
-          title: "Home",
+          tabBarLabel: "HOME",
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "home" : "home-outline"}
@@ -36,8 +37,8 @@ export default function TabLayout() {
         options={{
           tabBarLabel: "WATCH",
           tabBarIcon: ({ color, size, focused }) => (
-            <FontAwesome5
-              name={focused ? "youtube" : "youtube-square"}
+            <Ionicons
+              name={focused ? "phone-portrait" : "phone-portrait-outline"}
               size={size}
               color={color}
             />
