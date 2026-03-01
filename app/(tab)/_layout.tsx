@@ -32,7 +32,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="Watch"
+        name="watch"
         options={{
           title: "WATCH",
           tabBarIcon: ({ color, size, focused }) => (
