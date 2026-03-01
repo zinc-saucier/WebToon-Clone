@@ -16,7 +16,7 @@ export default function Index() {
       
         <Pressable onPress={() => router.push("../(tab)/settings/profile")}>
             <ComicCard
-                left={<Image source={{ uri: "https://www.webtoons.com/en/canvas/war-and-peas/list?title_no=63305" }} style={styles.comicThumb} />} 
+                thumb={<Image source={{ uri: "https://www.webtoons.com/en/canvas/war-and-peas/list?title_no=63305" }} style={styles.comicThumb} />} 
                 title={''}
                 episode={''}
                 notif={''}
