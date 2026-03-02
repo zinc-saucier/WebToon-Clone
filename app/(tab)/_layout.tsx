@@ -1,6 +1,7 @@
-//import { Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
-import Icon from "react-native-vector-icons/Feather";
+import React from "react";
+
 
 export default function TabLayout() {
   return (
@@ -25,12 +26,11 @@ export default function TabLayout() {
         options={{
           tabBarLabel: "HOME",
           tabBarIcon: ({ color, size, focused }) => (
-            <Icon name="home" size={size} color={color} />
-            //<Ionicons
-            //  name={focused ? "home" : "home-outline"}
-            //  size={size}
-            //  color={color}
-            ///>
+            <Ionicons
+              name={focused ? "home" : "home-outline"}
+              size={size}
+              color={color}
+            />
           ),
         }}
       />
@@ -39,12 +39,11 @@ export default function TabLayout() {
         options={{
           tabBarLabel: "WATCH",
           tabBarIcon: ({ color, size, focused }) => (
-            <Icon name="home" size={size} color={color} />
-            //<Ionicons
-            //  name={focused ? "phone-portrait" : "phone-portrait-outline"}
-            //  size={size}
-            //  color={color}
-            ///>
+            <Ionicons
+              name={focused ? "phone-portrait" : "phone-portrait-outline"}
+              size={size}
+              color={color}
+            />
           ),
         }}
       />
@@ -53,12 +52,11 @@ export default function TabLayout() {
         options={{
           tabBarLabel: "SEARCH",
           tabBarIcon: ({ color, size, focused }) => (
-            <Icon name="search" size={size} color={color} />
-            //<Ionicons
-            //  name={focused ? "search" : "search-outline"}
-            //  size={size}
-            //  color={color}
-            ///>
+            <Ionicons
+              name={focused ? "search" : "search-outline"}
+              size={size}
+              color={color}
+            />
           ),
         }}
       />
@@ -67,12 +65,11 @@ export default function TabLayout() {
         options={{
           tabBarLabel: "CANVAS",
           tabBarIcon: ({ color, size, focused }) => (
-            <Icon name="home" size={size} color={color} />
-            //<Ionicons
-            //  name={focused ? "albums" : "albums-outline"}
-            //  size={size}
-            //  color={color}
-            ///>
+            <Ionicons
+              name={focused ? "albums" : "albums-outline"}
+              size={size}
+              color={color}
+            />
           ),
         }}
       />
@@ -81,12 +78,11 @@ export default function TabLayout() {
         options={{
           tabBarLabel: "My",
           tabBarIcon: ({ color, size, focused }) => (
-            <Icon name="home" size={size} color={color} />
-            //<Ionicons
-            //  name={focused ? "person" : "person-outline"}
-            //  size={size}
-            //  color={color}
-            ///>
+            <Ionicons
+              name={focused ? "person" : "person-outline"}
+              size={size}
+              color={color}
+            />
           ),
         }}
       />

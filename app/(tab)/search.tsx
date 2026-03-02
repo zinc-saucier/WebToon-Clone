@@ -28,9 +28,11 @@ const index = () => {
 
       <Text style={styles.subheader}>What Everyone's Searching</Text>
 
+      <CoverTile image={require('@/assets/images/CoverImage1.png')}/>
+
       <Text style={styles.subheader}>Browse Categories</Text>
 
-      <div style={styles.categoryTiles}>
+      <View style={styles.categoryTiles}>
         <CategoryTile
           text="Original Rankings"
           image={require("@/assets/images/ComicPreview1.png")}
@@ -39,8 +41,8 @@ const index = () => {
           text="CANVAS Rankings"
           image={require("@/assets/images/ComicPreview2.png")}
         />
-      </div>
-      <div style={styles.categoryTiles}>
+      </View>
+      <View style={styles.categoryTiles}>
         <CategoryTile
           text="New Releases"
           image={require("@/assets/images/ComicPreview3.png")}
@@ -49,8 +51,8 @@ const index = () => {
           text="Daily"
           image={require("@/assets/images/ComicPreview4.png")}
         />
-      </div>
-      <div style={styles.categoryTiles}>
+      </View>
+      <View style={styles.categoryTiles}>
         <CategoryTile
           text="US Originals"
           image={require("@/assets/images/ComicPreview5.png")}
@@ -59,8 +61,8 @@ const index = () => {
           text="Video Episodes"
           image={require("@/assets/images/ComicPreview6.png")}
         />
-      </div>
-      <div style={styles.categoryTiles}>
+      </View>
+      <View style={styles.categoryTiles}>
         <CategoryTile
           text="Graphic Novels"
           image={require("@/assets/images/ComicPreview1.png")}
@@ -69,7 +71,7 @@ const index = () => {
           text="Action"
           image={require("@/assets/images/ComicPreview1.png")}
         />
-      </div>
+      </View>
     </View>
   );
 };
