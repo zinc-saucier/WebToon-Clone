@@ -76,4 +76,10 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginLeft: 25,
   },
+  picksBox: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    marginTop: 10
+  }
 });
