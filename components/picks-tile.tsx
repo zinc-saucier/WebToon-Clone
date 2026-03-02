@@ -9,7 +9,7 @@ type TileProps = {
 const PicksTile = ({ text, image }: TileProps) => {
   return (
     <View>
-      <Image source={{ uri: image }} style={styles.boxImage} />
+      <Image source={require(image)} style={styles.boxImage} />
       <Text style={styles.boxText}>{text}</Text>
     </View>
   );
