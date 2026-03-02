@@ -35,12 +35,12 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: theme.colors.card,
     padding: theme.spacing.card,
-    borderWidth: 1,
+    borderBottomWidth: 1,
     borderColor: theme.colors.border,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: theme.spacing.gap,
+    height: 60,
   },
   textWrap: {
     flex: 1,
