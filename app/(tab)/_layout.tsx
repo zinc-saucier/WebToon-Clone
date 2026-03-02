@@ -1,16 +1,19 @@
-import { FontAwesome5, Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+
+import { theme } from "../../styles/theme";
+
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: "#00dc64",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: theme.colors.primary,
+        tabBarInactiveTintColor: theme.colors.border,
         tabBarStyle: {
           height: 63,
           paddingBottom: 8,
-          backgroundColor: "black",
+          backgroundColor: theme.colors.bg,
         },
         tabBarLabelStyle: {
           fontSize: 12,
@@ -21,7 +24,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="home"
         options={{
-          title: "Home",
+          tabBarLabel: "HOME",
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "home" : "home-outline"}
@@ -32,12 +35,12 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="Watch"
+        name="watch"
         options={{
-          title: "WATCH",
+          tabBarLabel: "WATCH",
           tabBarIcon: ({ color, size, focused }) => (
-            <FontAwesome5
-              name={focused ? "youtube" : "youtube-square"}
+            <Ionicons
+              name={focused ? "phone-portrait" : "phone-portrait-outline"}
               size={size}
               color={color}
             />
@@ -47,7 +50,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="search"
         options={{
-          title: "SEARCH",
+          tabBarLabel: "SEARCH",
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "search" : "search-outline"}
@@ -60,7 +63,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="canvas"
         options={{
-          title: "CANVAS",
+          tabBarLabel: "CANVAS",
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "albums" : "albums-outline"}
@@ -71,9 +74,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="my"
+        name="subscribed"
         options={{
-          title: "My",
+          tabBarLabel: "My",
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "person" : "person-outline"}

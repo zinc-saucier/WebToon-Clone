@@ -33,7 +33,14 @@ const styles = StyleSheet.create({
 
     },
   card: {
-    
+    backgroundColor: theme.colors.card,
+    padding: theme.spacing.card,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: theme.spacing.gap,
   },
   textWrap: {
     flex: 1,

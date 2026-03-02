@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View, Pressable, Image, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, Pressable, Image, ScrollView } from 'react-native'
 import { theme } from "../../../styles/theme";
 import { useRouter } from 'expo-router';
 
 import ComicCard from '@/components/comic-card';
-import { comics } from '@/data/comics';
+
 
 const router = useRouter();
 
@@ -11,6 +11,15 @@ export default function Index() {
   
 
   return (
+    <View
+          style={{
+            flex: 1,
+            paddingTop: StatusBar.currentHeight,
+            backgroundColor: theme.colors.bg,
+            minWidth: 400,
+            maxWidth: "100%",
+          }}
+        >
     <View>
         <Text style={theme.h1}>My Series</Text>
     <ScrollView style={styles.container}>
@@ -39,6 +48,7 @@ export default function Index() {
             />
         </Pressable> */}
     </ScrollView>
+    </View>
     </View>
   );
 }
