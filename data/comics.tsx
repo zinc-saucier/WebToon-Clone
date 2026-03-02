@@ -2,7 +2,7 @@
 
 //comic data
 export type ComicProps = {
-    id: number;
+    id: string;
     thumb: string;
     title: string;
     episode: number;
@@ -12,7 +12,7 @@ export type ComicProps = {
 
 export const comics = [
   {
-    id: 1,
+    id: "1",
     thumb: "https://randomuser.me/api/portraits/women/1.jpg",
     title: 'war and peas',
     episode: 2,

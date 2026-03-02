@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, StatusBar } from 'react-native'
 
-import { theme } from "../../../styles/theme";
+import {theme} from "../../../styles/theme";
 
 const comic = () => {
   return (
@@ -17,9 +17,9 @@ const comic = () => {
         <Text>comic</Text>
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default comic;
+export default comic
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({})
