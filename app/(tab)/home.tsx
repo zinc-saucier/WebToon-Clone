@@ -1,13 +1,15 @@
 import React from "react";
 import { Image, StatusBar, StyleSheet, View, Text } from "react-native";
 
+import {theme} from "../../styles/theme";
+
 export default function Index() {
   return (
     <View
       style={{
         flex: 1,
         paddingTop: StatusBar.currentHeight,
-        backgroundColor: "#000",
+        backgroundColor: theme.colors.bg,
         minWidth: 400,
         maxWidth: "100%",
       }}
