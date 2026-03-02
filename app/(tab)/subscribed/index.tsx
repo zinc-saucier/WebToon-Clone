@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, StatusBar, Pressable, Image, FlatList, ScrollVi
 import { useRouter } from 'expo-router';
 
 import ComicCard from '@/components/comic-card';
-import { comics } from '@/data/comics';
+
 import { theme } from "../../../styles/theme";
 
 
@@ -58,7 +58,7 @@ export default function Index() {
           borderBottomWidth: 1,
           borderColor: theme.colors.border,
           flexDirection: "row",
-          justifyContent: "left",
+          justifyContent: 'flex-start',
           padding: theme.spacing.card,
         }}
       >
