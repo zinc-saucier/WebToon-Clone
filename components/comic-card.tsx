@@ -16,8 +16,8 @@ const ComicCard = ({id, thumb, title, episode, notif}: ComicProps) => {
                     <Image source={{ uri: thumb }} style={styles.comicTile}/>
                     
                     <Text style={styles.title}>{title}</Text>
-                    <Text style={styles.episode}>{comic.episode}</Text>
-                    <Text style={styles.notif}>{comic.notif}</Text>
+                    <Text style={styles.episode}>{episode}</Text>
+                    <Text style={styles.notif}>{notif}</Text>
                 </View>
             ))
 

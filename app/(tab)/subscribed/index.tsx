@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View, StatusBar, Pressable, Image, ScrollView } from 'react-native'
-import { theme } from "../../../styles/theme";
+import { StyleSheet, Text, View, StatusBar, Pressable, Image, FlatList } from 'react-native'
 import { useRouter } from 'expo-router';
 
 import ComicCard from '@/components/comic-card';
+import { comics } from '@/data/comics';
+import { theme } from "../../../styles/theme";
 
 
 const router = useRouter();
@@ -16,38 +17,22 @@ export default function Index() {
             flex: 1,
             paddingTop: StatusBar.currentHeight,
             backgroundColor: theme.colors.bg,
-            minWidth: 400,
+            minWidth: 350,
             maxWidth: "100%",
           }}
         >
     <View>
         <Text style={theme.h1}>My Series</Text>
-    <ScrollView style={styles.container}>
-      
-        {/* <Pressable onPress={() => router.push("../(tab)/settings/profile")}> */}
-            <ComicCard
-                id={1}
-                thumb="https://www.webtoons.com/en/canvas/war-and-peas/list?title_no=63305" 
-                title={''}
-                episode={2}
-                notif={''}
-                
-                />
-                
-        {/* </Pressable> */}
-        {/* <Pressable onPress={() => router.push("../(tab)/settings/profile")}>
-            <ComicCard
-                title="Account"
-                subtitle="Update profile settings"
-                right={
-                <Image
-                    source={{uri:"https://www.webtoons.com/en/canvas/war-and-peas/list?title_no=63305"}}
-                    style={styles.comicThumb}
-                />
-            }
-            />
-        </Pressable> */}
-    </ScrollView>
+    <FlatList 
+     data ={comics}
+      keyExtractor={(comic) => comic.id}
+      renderItem={({item})=> (
+        <View>
+        <ComicCard key={item.id} id={item.id} thumb= {item.thumb} title={item.title} episode={item.episode} notif={item.notif}/>
+        </View>
+
+      )}
+     />
     </View>
     </View>
   );
