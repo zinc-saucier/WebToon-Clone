@@ -1,5 +1,5 @@
-import { StatusBar, Text, View } from "react-native";
-
+import React from "react";
+import { Image, StatusBar, StyleSheet, View, Text } from "react-native";
 
 export default function Index() {
   return (
@@ -9,10 +9,40 @@ export default function Index() {
         paddingTop: StatusBar.currentHeight,
         backgroundColor: "#000",
         minWidth: 400,
-        maxWidth: 600,
+        maxWidth: "100%",
       }}
     >
-      <Text></Text>
+      <Image
+        source={require("@/assets/images/WebtoonLogo.png")}
+        style={styles.logo}
+      />
+      <Image
+        source={require("@/assets/images/HomeBigImage.png")}
+        style={styles.bigImage}
+      />
+      <Text style={styles.picks}>Top Picks for You</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  logo: {
+    marginTop: 25,
+    marginLeft: 25,
+    marginBottom: 10,
+    height: 40,
+    width: 40,
+  },
+  bigImage: {
+    height: "50%",
+    width: "100%",
+    resizeMode: "contain",
+    alignSelf: "center",
+  },
+  picks: {
+    fontWeight: '600',
+    color: 'white',
+    marginTop: 20,
+    marginLeft: 25
+  }
+});
