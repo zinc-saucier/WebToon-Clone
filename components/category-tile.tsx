@@ -11,7 +11,7 @@ const CategoryTile = ({ text, image }: TileProps) => {
     <View style={styles.box}>
       <Text style={styles.boxText}>{text}</Text>
       <View style={styles.imageBox}>
-        <Image source={{ uri: image }} style={styles.boxImage} />
+        <Image source={require(image)} style={styles.boxImage} />
       </View>
     </View>
   );

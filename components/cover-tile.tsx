@@ -8,7 +8,7 @@ type imgProp = {
 const CoverTile = ({ image }: imgProp) => {
   return (
     <View style={styles.box}>
-      <Image source={{ uri: image }} style={styles.boxImage} />
+      <Image source={require(image)} style={styles.boxImage} />
     </View>
   );
 };
