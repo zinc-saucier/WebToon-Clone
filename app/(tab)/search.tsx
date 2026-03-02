@@ -28,7 +28,12 @@ const index = () => {
 
       <Text style={styles.subheader}>What Everyone's Searching</Text>
 
-      <CoverTile image={require('@/assets/images/CoverImage1.png')}/>
+      <View style={styles.coverBox}>
+        <CoverTile image={require('@/assets/images/CoverImage1.png')}/>
+        <CoverTile image={require('@/assets/images/CoverImage2.png')}/>
+        <CoverTile image={require('@/assets/images/CoverImage3.png')}/>
+      </View>
+      
 
       <Text style={styles.subheader}>Browse Categories</Text>
 
@@ -109,6 +114,10 @@ const styles = StyleSheet.create({
   coverTiles: {
     display: "flex",
   },
+  coverBox: {
+    display: 'flex',
+    flexDirection: 'row'
+  }
 });
 
 export default index;
