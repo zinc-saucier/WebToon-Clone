@@ -10,7 +10,7 @@ export const theme = {
   },
   spacing: {
     screen: 20,
-    card: 16,
+    card: 10,
     gap: 12,
   },
   radius: {
@@ -18,7 +18,10 @@ export const theme = {
     input: 10,
   },
   h1: {
-    //heading font style, "my series, spotlight, search etc"
+    color: "white",
+    fontWeight: "600",
+    fontSize: 20,
+    
   },
   comicStyle: {
  // styling for subscribed page tiles

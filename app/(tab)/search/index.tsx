@@ -1,16 +1,17 @@
-import CategoryTile from "@/components/category-tile";
 import React from "react";
-import { StatusBar, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
+import CategoryTile from "../../../components/category-tile";
+import CoverTile from "../../../components/cover-tile";
 
 const SearchIcon = <Icon name="search" size={25} color={"#8c8c8c"} />;
 
-export default function Index() {
+const index = () => {
   return (
     <View
       style={{
         flex: 1,
-        paddingTop: StatusBar.currentHeight,
+        paddingTop: 20,
         backgroundColor: "#000",
         minWidth: 400,
         maxWidth: 600,
@@ -27,21 +28,53 @@ export default function Index() {
 
       <Text style={styles.subheader}>What Everyone's Searching</Text>
 
+      <CoverTile image={require("@/assets/images/CoverImage1.png")} />
+
       <Text style={styles.subheader}>Browse Categories</Text>
 
-      <div style={styles.categoryTiles}>
+      <View style={styles.categoryTiles}>
         <CategoryTile
           text="Original Rankings"
           image={require("@/assets/images/ComicPreview1.png")}
         />
         <CategoryTile
-          text="Original Rankings"
-          image="../assets/images/ComicPreview1.png"
+          text="CANVAS Rankings"
+          image={require("@/assets/images/ComicPreview2.png")}
         />
-      </div>
+      </View>
+      <View style={styles.categoryTiles}>
+        <CategoryTile
+          text="New Releases"
+          image={require("@/assets/images/ComicPreview3.png")}
+        />
+        <CategoryTile
+          text="Daily"
+          image={require("@/assets/images/ComicPreview4.png")}
+        />
+      </View>
+      <View style={styles.categoryTiles}>
+        <CategoryTile
+          text="US Originals"
+          image={require("@/assets/images/ComicPreview5.png")}
+        />
+        <CategoryTile
+          text="Video Episodes"
+          image={require("@/assets/images/ComicPreview6.png")}
+        />
+      </View>
+      <View style={styles.categoryTiles}>
+        <CategoryTile
+          text="Graphic Novels"
+          image={require("@/assets/images/ComicPreview1.png")}
+        />
+        <CategoryTile
+          text="Action"
+          image={require("@/assets/images/ComicPreview1.png")}
+        />
+      </View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   header: {
@@ -73,4 +106,9 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
+  coverTiles: {
+    display: "flex",
+  },
 });
+
+export default index;

@@ -1,7 +1,12 @@
 import React from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
-const PicksTile = ({ text, image }) => {
+type TileProps = {
+  text: string;
+  image: any;
+};
+
+const PicksTile = ({ text, image }: TileProps) => {
   return (
     <View>
       <Image source={image} style={styles.boxImage} />
@@ -18,8 +23,7 @@ const styles = StyleSheet.create({
   boxText: {
     color: "green",
     fontSize: 10,
-    fontWeight: 600
-
+    fontWeight: 600,
   },
 });
 
