@@ -7,6 +7,10 @@ export default function SettingsLayout() {
         name="index"
         options={{ title: "My", headerShown: false }}
       />
+       <Stack.Screen
+        name="comics"
+        options={{ title: "COMICS", headerShown: false }}
+      />
     </Stack>
   );
 }

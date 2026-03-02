@@ -3,7 +3,7 @@
 //comic data
 export type ComicProps = {
     id: string;
-    thumb: string;
+    thumb: any;
     title: string;
     episode: number;
     notif: string;
@@ -13,7 +13,6 @@ export type ComicProps = {
 export const comics = [
   {
     id: "1",
-<<<<<<< Updated upstream
     thumb: "@assets/images/ComicPreview1.png",
     title: 'war and peas',
     episode: 2,
@@ -78,9 +77,6 @@ export const comics = [
    {
     id: "9",
     thumb: "../assets/images/ComicPreview1.png",
-=======
-    thumb: "../../assets/images/comicpreview5",
->>>>>>> Stashed changes
     title: 'war and peas',
     episode: 2,
     notif: 'last read yesterday',

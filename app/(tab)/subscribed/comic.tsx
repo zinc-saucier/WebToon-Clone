@@ -9,7 +9,7 @@ const comic = () => {
                 flex: 1,
                 paddingTop: StatusBar.currentHeight,
                 backgroundColor: theme.colors.bg,
-                minWidth: 400,
+                minWidth: 350,
                 maxWidth: "100%",
               }}
             >

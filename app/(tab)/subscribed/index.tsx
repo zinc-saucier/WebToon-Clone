@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, StatusBar, Pressable, Image, FlatList } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, Pressable, Image, FlatList, ScrollView } from 'react-native'
 import { useRouter } from 'expo-router';
 
 import ComicCard from '@/components/comic-card';
@@ -20,16 +20,19 @@ export default function Index() {
             minWidth: 350,
             maxWidth: "100%",
           }}
+          
     >
+      <Text style={styles.header}>My Series</Text>
       <View
         style={{
           flex: 8,
-          height: 30,
+          height: 10,
           borderBottomWidth: 1,
+          borderColor: theme.colors.border,
           padding: theme.spacing.card,
         }}
       >
-          <Text style={styles.header}>My Series</Text>
+          
       </View>  
       <View
         style={{
@@ -48,27 +51,79 @@ export default function Index() {
           <Text style={styles.text}>UNLOCKED</Text>
           <Text style={styles.text}>CREATORS</Text>
       </View>
-      <View>
+      
         
-      <FlatList 
-      data ={comics}
-        keyExtractor={(comic) => comic.id}
-        renderItem={({item})=> (
-          <View style={{
+      <ScrollView
+      
+          style={{
             marginTop: 40,
+            
           }}>
+            <Pressable onPress={() => router.push("../(tab)/subscribed/comic")}>
             <ComicCard 
-              key={item.id} 
-              id={item.id} 
-              thumb= {item.thumb} 
-              title={item.title} 
-              episode={item.episode} 
-              notif={item.notif}/>
-          </View>
-
-        )}
-      />
-      </View>
+              id={"1"}
+              thumb= {require("@/assets/images/ComicPreview1.png")}
+              title= {'war and peas'}
+              episode={2}
+              notif={'last read yesterday'}
+              />
+              </Pressable>
+              <Pressable onPress={() => router.push("../(tab)/subscribed/comic")}>
+            <ComicCard 
+              id={"1"}
+              thumb= {require("@/assets/images/ComicPreview2.png")}
+              title= {'war and peas'}
+              episode={2}
+              notif={'last read yesterday'}
+              />
+              </Pressable>
+              <Pressable onPress={() => router.push("../(tab)/subscribed/comic")}>
+            <ComicCard 
+              id={"1"}
+              thumb= {require("@/assets/images/ComicPreview3.png")}
+              title= {'war and peas'}
+              episode={2}
+              notif={'last read yesterday'}
+              />
+              </Pressable>
+              <Pressable onPress={() => router.push("../(tab)/subscribed/comic")}>
+            <ComicCard 
+              id={"1"}
+              thumb= {require("@/assets/images/ComicPreview4.png")}
+              title= {'war and peas'}
+              episode={2}
+              notif={'last read yesterday'}
+              />
+              </Pressable>
+              <Pressable onPress={() => router.push("../(tab)/subscribed/comic")}>
+            <ComicCard 
+              id={"1"}
+              thumb= {require("@/assets/images/ComicPreview5.png")}
+              title= {'war and peas'}
+              episode={2}
+              notif={'last read yesterday'}
+              />
+              </Pressable>
+              <Pressable onPress={() => router.push("../(tab)/subscribed/comic")}>
+            <ComicCard 
+              id={"1"}
+              thumb= {require("@/assets/images/ComicPreview6.png")}
+              title= {'war and peas'}
+              episode={2}
+              notif={'last read yesterday'}
+              />
+              </Pressable>
+              <Pressable onPress={() => router.push("../(tab)/subscribed/comic")}>
+            <ComicCard 
+              id={"1"}
+              thumb= {require("@/assets/images/ComicPreview1.png")}
+              title= {'war and peas'}
+              episode={2}
+              notif={'last read yesterday'}
+              />
+              </Pressable>
+          
+        </ScrollView>
     </View>
   );
 }
@@ -77,7 +132,7 @@ export default function Index() {
 
 const styles = StyleSheet.create({
     container: {
-
+      marginTop: 40,
     },
     comicThumb: {
 
@@ -92,7 +147,7 @@ const styles = StyleSheet.create({
     header: {
     color: "white",
     fontWeight: "600",
-    lineheight: 30,
+    lineHeight: 30,
     fontSize: 20,
     margin: 10,
   },
