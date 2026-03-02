@@ -2,13 +2,13 @@ import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 
 type imgProp = {
-  image: string;
+  image: any;
 };
 
 const CoverTile = ({ image }: imgProp) => {
   return (
     <View style={styles.box}>
-      <Image source={require(image)} style={styles.boxImage} />
+      <Image source={image} style={styles.boxImage} />
     </View>
   );
 };

@@ -3,13 +3,13 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 type TileProps = {
   text: string;
-  image: string;
+  image: any;
 };
 
 const PicksTile = ({ text, image }: TileProps) => {
   return (
     <View>
-      <Image source={require(image)} style={styles.boxImage} />
+      <Image source={image} style={styles.boxImage} />
       <Text style={styles.boxText}>{text}</Text>
     </View>
   );
