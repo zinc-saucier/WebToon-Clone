@@ -11,7 +11,7 @@ const ComicCard = ({id, thumb, title, episode, notif}: ComicProps) => {
   return (
     <ScrollView style={styles.container}>
         {
-            comics.map((comic)=> (
+            
                 <View key={id} style={styles.card}>
                     <Image source={thumb} style={styles.comicTile}/>
                     <View style={{
@@ -39,7 +39,7 @@ const ComicCard = ({id, thumb, title, episode, notif}: ComicProps) => {
                       <Text style={styles.notif}>Reading</Text>
                     </View>
                 </View>
-            ))
+          
 
         }    
          </ScrollView>
