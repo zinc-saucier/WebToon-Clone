@@ -1,14 +1,13 @@
 import React from "react";
-import { Image, StatusBar, StyleSheet, View, Text } from "react-native";
-
-import {theme} from "../../styles/theme";
+import { Image, StyleSheet, Text, View } from "react-native";
+import { theme } from "../../styles/theme";
 
 export default function Index() {
   return (
     <View
       style={{
         flex: 1,
-        paddingTop: StatusBar.currentHeight,
+        paddingTop: 20,
         backgroundColor: theme.colors.bg,
         minWidth: 400,
         maxWidth: "100%",
@@ -42,9 +41,9 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   picks: {
-    fontWeight: '600',
-    color: 'white',
+    fontWeight: "600",
+    color: "white",
     marginTop: 20,
-    marginLeft: 25
-  }
+    marginLeft: 25,
+  },
 });

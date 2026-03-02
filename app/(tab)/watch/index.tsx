@@ -1,26 +1,25 @@
-import { StyleSheet, Text, View, StatusBar } from 'react-native'
+import { StyleSheet, Text, View } from "react-native";
 
-import {theme} from "../../../styles/theme";
+import { theme } from "../../../styles/theme";
 
 const comic = () => {
   return (
     <View
-              style={{
-                flex: 1,
-                paddingTop: StatusBar.currentHeight,
-                backgroundColor: theme.colors.bg,
-                minWidth: 400,
-                maxWidth: "100%",
-              }}
-            >
-    
-    <View>
-      <Text>comic</Text>
+      style={{
+        flex: 1,
+        paddingTop: 20,
+        backgroundColor: theme.colors.bg,
+        minWidth: 400,
+        maxWidth: "100%",
+      }}
+    >
+      <View>
+        <Text>comic</Text>
+      </View>
     </View>
-    </View>
-  )
-}
+  );
+};
 
-export default comic
+export default comic;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

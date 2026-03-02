@@ -3,8 +3,10 @@ import { Stack } from "expo-router";
 export default function SettingsLayout() {
   return (
     <Stack>
-      <Stack.Screen name="index" options={{ title: "SEARCH" }} />
-      
+      <Stack.Screen
+        name="index"
+        options={{ title: "SEARCH", headerShown: false }}
+      />
     </Stack>
   );
 }

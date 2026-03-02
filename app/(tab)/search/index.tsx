@@ -1,8 +1,8 @@
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import Icon from "react-native-vector-icons/Feather";
 import CategoryTile from "../../../components/category-tile";
 import CoverTile from "../../../components/cover-tile";
-import React from "react";
-import { StatusBar, StyleSheet, Text, View } from "react-native";
-import Icon from "react-native-vector-icons/Feather";
 
 const SearchIcon = <Icon name="search" size={25} color={"#8c8c8c"} />;
 
@@ -11,7 +11,7 @@ const index = () => {
     <View
       style={{
         flex: 1,
-        paddingTop: StatusBar.currentHeight,
+        paddingTop: 20,
         backgroundColor: "#000",
         minWidth: 400,
         maxWidth: 600,
@@ -28,14 +28,14 @@ const index = () => {
 
       <Text style={styles.subheader}>What Everyone's Searching</Text>
 
-      <CoverTile image={require('@/assets/images/CoverImage1.png')}/>
+      <CoverTile image={require("@/assets/images/CoverImage1.png")} />
 
       <Text style={styles.subheader}>Browse Categories</Text>
 
       <View style={styles.categoryTiles}>
         <CategoryTile
           text="Original Rankings"
-          image={require('@/assets/images/ComicPreview1.png')}
+          image={require("@/assets/images/ComicPreview1.png")}
         />
         <CategoryTile
           text="CANVAS Rankings"

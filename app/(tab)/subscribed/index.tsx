@@ -1,41 +1,41 @@
-import { StyleSheet, Text, View, StatusBar, Pressable, Image, ScrollView } from 'react-native'
+import { useRouter } from "expo-router";
+import {
+    ScrollView,
+    StyleSheet,
+    Text,
+    View
+} from "react-native";
 import { theme } from "../../../styles/theme";
-import { useRouter } from 'expo-router';
 
-import ComicCard from '@/components/comic-card';
-
+import ComicCard from "@/components/comic-card";
 
 const router = useRouter();
 
 export default function Index() {
-  
-
   return (
     <View
-          style={{
-            flex: 1,
-            paddingTop: StatusBar.currentHeight,
-            backgroundColor: theme.colors.bg,
-            minWidth: 400,
-            maxWidth: "100%",
-          }}
-        >
-    <View>
+      style={{
+        flex: 1,
+        paddingTop: 20,
+        backgroundColor: theme.colors.bg,
+        minWidth: 400,
+        maxWidth: "100%",
+      }}
+    >
+      <View>
         <Text style={theme.h1}>My Series</Text>
-    <ScrollView style={styles.container}>
-      
-        {/* <Pressable onPress={() => router.push("../(tab)/settings/profile")}> */}
-            <ComicCard
-                id={1}
-                thumb="https://www.webtoons.com/en/canvas/war-and-peas/list?title_no=63305" 
-                title={''}
-                episode={2}
-                notif={''}
-                
-                />
-                
-        {/* </Pressable> */}
-        {/* <Pressable onPress={() => router.push("../(tab)/settings/profile")}>
+        <ScrollView style={styles.container}>
+          {/* <Pressable onPress={() => router.push("../(tab)/settings/profile")}> */}
+          <ComicCard
+            id={1}
+            thumb="https://www.webtoons.com/en/canvas/war-and-peas/list?title_no=63305"
+            title={""}
+            episode={2}
+            notif={""}
+          />
+
+          {/* </Pressable> */}
+          {/* <Pressable onPress={() => router.push("../(tab)/settings/profile")}>
             <ComicCard
                 title="Account"
                 subtitle="Update profile settings"
@@ -47,19 +47,13 @@ export default function Index() {
             }
             />
         </Pressable> */}
-    </ScrollView>
-    </View>
+        </ScrollView>
+      </View>
     </View>
   );
 }
 
-
-
 const styles = StyleSheet.create({
-    container: {
-
-    },
-    comicThumb: {
-
-    },
-})
+  container: {},
+  comicThumb: {},
+});
