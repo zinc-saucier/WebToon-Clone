@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 type TileProps = {
   text: string;
-  image: string;
+  image: any;
 };
 
 const CategoryTile = ({ text, image }: TileProps) => {
@@ -11,7 +11,7 @@ const CategoryTile = ({ text, image }: TileProps) => {
     <View style={styles.box}>
       <Text style={styles.boxText}>{text}</Text>
       <View style={styles.imageBox}>
-        <Image source={require(image)} style={styles.boxImage} />
+        <Image source={image} style={styles.boxImage} />
       </View>
     </View>
   );
