@@ -1,5 +1,6 @@
+import { router } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
 import CategoryTile from "../../../components/category-tile";
 import CoverTile from "../../../components/cover-tile";
@@ -18,13 +19,14 @@ const index = () => {
       }}
     >
       <Text style={styles.header}>Search</Text>
-
-      <Text style={styles.searchBar}>
-        {SearchIcon}{" "}
-        <Text style={styles.searchText}>
-          Series, creators, categories, and more
+      <Pressable onPress={() => router.push("../(tab)/search/details")}>
+        <Text style={styles.searchBar}>
+          {SearchIcon}{" "}
+          <Text style={styles.searchText}>
+            Series, creators, categories, and more
+          </Text>
         </Text>
-      </Text>
+      </Pressable>
 
       <Text style={styles.subheader}>What Everyone's Searching</Text>
 

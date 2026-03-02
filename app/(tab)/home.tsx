@@ -23,7 +23,6 @@ export default function Index() {
         style={styles.bigImage}
       />
       <Text style={styles.picks}>Top Picks for You</Text>
-      <Text style={styles.picks}>Top Picks for You</Text>
       <View style={styles.picksBox}>
         <PicksTile
           text="3 more free episodes"
@@ -77,9 +76,9 @@ const styles = StyleSheet.create({
     marginLeft: 25,
   },
   picksBox: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    marginTop: 10
-  }
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    marginTop: 10,
+  },
 });

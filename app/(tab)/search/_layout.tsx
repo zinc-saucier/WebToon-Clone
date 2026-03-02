@@ -7,6 +7,10 @@ export default function SettingsLayout() {
         name="index"
         options={{ title: "SEARCH", headerShown: false }}
       />
+      <Stack.Screen
+        name="details"
+        options={{ title: "Details", headerShown: false }}
+      />
     </Stack>
   );
 }

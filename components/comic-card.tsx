@@ -1,37 +1,30 @@
 // for subscribed and drill down comic/episode full width tiles
-import { ScrollView, StyleSheet, Text, View, Image } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
+import { ComicProps, comics } from "@/data/comics";
 import { theme } from "../styles/theme";
-import { comics, ComicProps } from "@/data/comics";
-
-
 
 // React.ReactNode is a TypeScript type that means: "anything React can render."
-const ComicCard = ({id, thumb, title, episode, notif}: ComicProps) => {
+const ComicCard = ({ id, thumb, title, episode, notif }: ComicProps) => {
   return (
     <ScrollView style={styles.container}>
-        {
-            comics.map((comic)=> (
-                <View key={id} style={styles.card}>
-                    <Image source={{ uri: thumb }} style={styles.comicTile}/>
-                    
-                    <Text style={styles.title}>{title}</Text>
-                    <Text style={styles.episode}>{episode}</Text>
-                    <Text style={styles.notif}>{notif}</Text>
-                </View>
-            ))
+      {comics.map((comic) => (
+        <View key={id} style={styles.card}>
+          <Image source={thumb} style={styles.comicTile} />
 
-        }    
-         </ScrollView>
-       //insert button/pressable here
-    );
-}
-export default ComicCard
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.episode}>{episode}</Text>
+          <Text style={styles.notif}>{notif}</Text>
+        </View>
+      ))}
+    </ScrollView>
+    //insert button/pressable here
+  );
+};
+export default ComicCard;
 
 const styles = StyleSheet.create({
-    container: {
-
-    },
+  container: {},
   card: {
     backgroundColor: theme.colors.card,
     padding: theme.spacing.card,
