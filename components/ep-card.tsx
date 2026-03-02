@@ -2,12 +2,17 @@
 import { ScrollView, StyleSheet, Text, View, Image, Touchable } from "react-native";
 
 import { theme } from "../styles/theme";
-import { comics, ComicProps } from "@/data/comics";
 
 
+export type EpProps = {
+    id: string;
+    thumb: any;
+    title: string;
+    notif: string;
+};
 
 
-const ComicCard = ({id, thumb, title, episode, notif}: ComicProps) => {
+const EpCard = ({id, thumb, title, notif}: EpProps) => {
   return (
     <ScrollView style={styles.container}>
         {
@@ -21,7 +26,7 @@ const ComicCard = ({id, thumb, title, episode, notif}: ComicProps) => {
                     }}>
                     
                     <Text style={styles.title}>{title}</Text>
-                    <Text style={styles.episode}>{episode}</Text>
+                    
                     <Text style={styles.notif}>{notif}</Text>
                     </View>
                     <View 
@@ -35,8 +40,8 @@ const ComicCard = ({id, thumb, title, episode, notif}: ComicProps) => {
                         paddingLeft: 20,
                       }}>
                     
-                      <Text style={styles.episode}>Continue</Text>
-                      <Text style={styles.notif}>Reading</Text>
+                      <Text style={styles.episode}>Read</Text>
+                      
                     </View>
                 </View>
           
@@ -46,7 +51,7 @@ const ComicCard = ({id, thumb, title, episode, notif}: ComicProps) => {
        
     );
 }
-export default ComicCard
+export default EpCard
 
 const styles = StyleSheet.create({
     container: {
