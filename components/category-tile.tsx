@@ -1,13 +1,18 @@
 import React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
 
+// type TileProps = {
+//     text: string;
+//     image: string;
+// }
+
 const CategoryTile = ({text, image}) => {
     return (
         <View style={styles.box}>
             <Text style={styles.boxText}>{text}</Text>
-            <div style={styles.imageBox}>
+            <View style={styles.imageBox}>
                 <Image source={image} style={styles.boxImage}/>
-            </div>
+            </View>
         </View>
     )
     
